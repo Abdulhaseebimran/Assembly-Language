@@ -1,2 +1,2 @@
 # Assembly-Language
-assembly language repofor all program 
+assembly language repo for all program 
