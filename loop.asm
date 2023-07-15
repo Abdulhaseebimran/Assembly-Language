@@ -1,31 +1,18 @@
-; Program to print 0 to 9 using loops statement
 .model small
 .stack 100h
 .data
 .code
-
 start:
 
-mov cx , 10
-mov dl,48
+mov cx,26 ; counter loop 26 times
+mov dl,65 ; ascii value of a
 
-L1:
-
-mov ah,2 
+l1:
+mov ah,02
 int 21h
+inc dl
+loop l1
+mov ah,4ch
+int 21h 
 
-add dx,1
-
-; ; for print new line
- ;mov dl, 10
- ;mov ah,2
- ;int 21h
-
-; mov dl, 13
-; mov ah,2
-; int 21h
-loop L1
-
-mov ah, 4ch
-int 21h
 end start
